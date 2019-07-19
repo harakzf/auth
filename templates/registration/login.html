@@ -11,10 +11,11 @@
     <p>Your account doesn't have access to this page. To proceed,
     please login with an account that has access.</p>
     {% else %}
-    <p>　　</p>
+    <p></p>
     {% endif %}
 {% endif %}
 
+<!-- actionでフォームデータ送信先URLを指定する -->
 <form method="post" action="{% url 'login' %}">
 {% csrf_token %}
 <table>
@@ -28,7 +29,9 @@
 </tr>
 </table>
 
-<input type="submit" value="login" />
+<input type="submit" value="ログイン" />
+
+<!-- 次に飛ばす先のURLを指定 -->
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 {% endblock %}
