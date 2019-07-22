@@ -1,7 +1,7 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.base import TemplateView
 
-class LoginView(LoginRequiredMixin, TemplateView):
+class SampleView(LoginRequiredMixin, TemplateView):
     template_name = 'sampleapp/hello.html'
 
     def get_context_data(self, **kwargs):
